@@ -2,17 +2,106 @@
 
 div.call-for-posters {
   background-color: var(--azul);
-  padding: 40px var(--pagePadding);
+  padding: 20px var(--pagePadding);
+  
 }
 
 div.call-for-posters h2 {
   color: var(--white);
   font-size: var(--section-header-font-size);
-  margin-bottom: 20px;
+  
 }
 
 div.call-for-posters > p{
     color: var(--white);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
 }
+
+div.call-for-posters > div.content-row {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 40px;
+}
+
+div.call-for-posters p, div.call-for-posters li {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+div.call-for-posters > div.content-row > div {
+  text-align: justify
+}
+
+div.call-for-posters div.leftContent {
+  width: 60%;
+}
+
+div.call-for-posters div.rightContent {
+  width: 40%;
+}
+
+div.call-for-posters div.leftContent a {
+  color: var(--laranja);
+}
+
+div.call-for-posters div.leftContent p.smallText {
+  font-size: 1rem;
+}
+
+a.poster-link {
+  --height: calc(1280px / 2);
+  --width: calc(905px / 2);
+
+  display: block;
+  height: var(--height);
+  width: var(--width);
+  margin: 0 auto
+}
+
+a.poster-link img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+div.call-for-posters div.btnSubsection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  
+  padding: 20px 0;
+}
+
+div.call-for-posters div.btnSubsection > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.call-for-posters div.btnSubsection > div > p {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+div.call-for-posters div.btnSubsection > div > p > a {
+  color: var(--laranja);
+  text-decoration: underline;
+  border: 0px;
+  padding: 0px;
+}
+
+
+
+div.call-for-posters div.btnSubsection a {
+  color: var(--laranja);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 1px solid var(--laranja);
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
