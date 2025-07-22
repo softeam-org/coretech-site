@@ -1,0 +1,74 @@
+div.social-event {
+  background-color: var(--laranja);
+  padding: 20px var(--pagePadding);
+  
+}
+
+div.social-event h2 {
+  color: var(--white);
+  font-size: var(--section-header-font-size);
+  margin-bottom: 10px;
+  
+}
+
+div.social-event > span{
+    color: var(--white);
+    font-size: var(--section-subtitle-font-size);
+}
+
+
+div.social-event p {
+  color: var(--white);
+  font-size: var(--section-text-font-size);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+div.social-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+div.pizza-img{
+    background-image: url('../assets/pizza.avif');
+    background-size: cover;
+    background-position: center;
+    width: calc(640px * 0.8);
+    height: calc(1138px * 0.5);
+    border-radius: 10px;
+}
+
+div.social-description {
+    background-color: #fff;
+    color: var(--azul);
+    width: 50%;
+    border-radius: 10px;
+    padding: 50px 40px;
+    height: max-content;
+}
+
+div.social-btns{
+    width: 100%;
+    padding: 30px 0px;
+}
+
+div.social-btns a {
+    text-decoration: none;
+    color: white;
+}
+
+div.social-btns a:nth-child(1) {
+    background-color: var(--azul);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+div.social-btns a:nth-child(2) {
+    background-color: var(--laranja);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
