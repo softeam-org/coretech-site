@@ -34,7 +34,7 @@ div.social-row{
 }
 
 div.pizza-img{
-    background-image: url('../assets/pizza.avif');
+    background-image: url('../assets/pizza.png');
     background-size: cover;
     background-position: center;
     width: calc(640px * 0.8);
