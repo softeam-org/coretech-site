@@ -40,6 +40,15 @@ div.pizza-img{
     width: calc(640px * 0.8);
     height: calc(1138px * 0.5);
     border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+div.pizza-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 div.social-description {
@@ -49,6 +58,7 @@ div.social-description {
     border-radius: 10px;
     padding: 50px 40px;
     height: max-content;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 div.social-btns{
@@ -59,6 +69,8 @@ div.social-btns{
 div.social-btns a {
     text-decoration: none;
     color: white;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
 }
 
 div.social-btns a:nth-child(1) {
@@ -71,4 +83,8 @@ div.social-btns a:nth-child(2) {
     background-color: var(--laranja);
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+div.social-btns a:hover {
+    transform: scale(1.01);
 }
