@@ -1,6 +1,10 @@
 :root{
     --laranja: #ff914d;
     --azul: #020f1f;
+    --cinza-fundo: #f4f7f9;
+    --cinza-texto: #555;
+    --branco: #ffffff;
+    --sombra-suave: 0 8px 24px rgba(2, 15, 31, 0.05);
 
     --pagePadding: 5vw;
     --section-header-font-size: 4rem;

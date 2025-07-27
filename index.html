@@ -305,82 +305,25 @@
       </div>
     </div>
 
-    <div class="program-container">
-      <div class="program-header" id="program">PROGRAM</div>
-      <table border="1" cellspacing="0" cellpadding="8">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Monday, 07/28/2025</th>
-            <th>Tuesday, 07/29/2025</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10:00 ~ 12:00</td>
-            <td>
-              <strong>Designing Digital Circuits with Pitanga Student</strong> 
-              <br>Alcides Costa - Ph.D. in Computer Science and co-founder of InPlace
-            </td>
-            <td>
-              <strong>Development and Simulation Environment for RISC-V Projects</strong> <br>
-              Bruno Prado - UFS and Ph.D. in Computer Science<br>
-            </td>
-          </tr>
-          <tr>
-            <td>Lunch Time</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>13:30 ~ 14:40 <br>(Introductory lecture)</td>
-            <td>
-              <strong>Introduction to Chip Design Automation</strong> <br>
-              Jose Luis Guntzel - UFSC and IEEE Senior member
-            </td>
-            <td>
-              <strong>Machine Learning aplicado no Projeto de Circuitos Integrados</strong> <br>
-              Cristina Meinhardt - UFSC and IEEE Senior member
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:50 ~ 16:00 <br>(Advanced Lecture)
-            </td>
-            <td>
-              <strong>Visualization Tools</strong> <br> 
-              Ricardo Reis - UFRGS and IEEE Life Senior member
-            </td>
-            <td>
-              <strong>Trends in Computing and Microelectronics</strong> <br>
-              Ricardo Reis - UFRGS and IEEE Life Senior member
-            </td>
-          </tr>
-          <tr>
-            <td>
-              16:10 ~ 17:00 <br>
-              Coffee break and Poster/Panel
-            </td>
-            <td><strong>Poster Session</strong></td>
-            <td><strong>Presenting IEEE-CEDA and IEEE-CASS</strong></td>
-          </tr>
-          <tr>
-            <td>
-              17:10 ~ 18:30 <br>
-              (Industrial Talks)
-            </td>
-            <td>
-              <strong>InPlace: The Journey of a Brazilian EDA Startup</strong><br>
-              Alcides Costa - Ph.D. in Computer Science and co-founder of InPlace <br>
-              
-            </td>
-            <td>
-              <strong>Opportunities in the Semiconductor and EDA Industry in Brazil</strong> <br>
-              Luiza Pena, Application Engineering Manager at Cadence
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="programacao-container" id="program">
+        <div class="programacao-header">
+            <h2>PROGRAM</h2>
+        </div>
+
+        <div class="busca-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="busca-atividade" placeholder="Search for title, speaker, category...">
+        </div>
+
+        <div class="filtros-data">
+            <button class="filtro-btn active" data-filter="all">All</button>
+            <button class="filtro-btn" data-filter="28">July, 28</button>
+            <button class="filtro-btn" data-filter="29">July, 29</button>
+        </div>
+
+        <div class="eventos-grid" id="eventos-grid">
+            
+        </div>
     </div>
 
     <div class="topics-of-interest">
@@ -753,6 +696,20 @@
       >
     </footer>
 
+    <div class="alert" id="alert0">
+      <div class="alert-content">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>
+          We're one day away from the event, and spots are running out. Register <a href="#registration"
+          onclick="document.getElementsByClassName('alert')[0].style.display='none'"
+          >here</a>
+        </span>
+      </div>
+      <button class="close-alert" id="closeAlert0" 
+        onclick="document.getElementsByClassName('alert')[0].style.display='none'">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+
     <script
       src="https://kit.fontawesome.com/c6444e5d29.js"
       crossorigin="anonymous"
@@ -760,17 +717,6 @@
     <script src="./js/carrousel.js"></script>
     <script src="./js/viewObservers.js"></script>
     <script src="./js/scroll.js"></script>
+    <script src="./js/program.js"></script>
   </body>
 </html>
-
-<!--
-
-
-
-
-
-
-
-
-
--->
