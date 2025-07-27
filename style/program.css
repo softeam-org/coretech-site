@@ -1,6 +1,6 @@
 .programacao-container {
             width: 100%;
-            margin: 40px auto; /* Centraliza a seção */
+            margin: 40px auto; 
             padding: var(--pagePadding);
         }
 
@@ -14,22 +14,22 @@
             margin: 0;
         }
 
-        /* Estilos para a barra de busca */
+        
         .busca-container {
             position: relative;
             margin-bottom: 30px;
-            max-width: 80%; /* Limita a largura da barra de busca */
-            margin: 20px auto; /* Centraliza a barra de busca */
+            max-width: 80%; 
+            margin: 20px auto; 
         }
 
         .busca-container #busca-atividade {
             width: 100%;
-            padding: 15px 20px 15px 50px; /* Espaço para o ícone */
+            padding: 15px 20px 15px 50px; 
             border: 1px solid #ddd;
-            border-radius: 30px; /* Bordas arredondadas */
+            border-radius: 30px; 
             font-size: 1rem;
             outline: none;
-            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+            box-sizing: border-box; 
             transition: border-color 0.3s, box-shadow 0.3s;
         }
 
@@ -46,13 +46,13 @@
             color: #aaa;
         }
 
-        /* Filtros de data */
+        
         .filtros-data {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-bottom: 30px;
-            flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+            flex-wrap: wrap; 
         }
 
         .filtros-data .filtro-btn {
@@ -75,16 +75,16 @@
             box-shadow: 0 4px 10px rgba(255, 145, 77, 0.4);
         }
 
-        /* Grade que contém os cards de evento */
+        
         .eventos-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
-            max-width: 1200px; /* Limita a largura máxima da grade */
-            margin: 0 auto; /* Centraliza a grade */
+            max-width: 1200px; 
+            margin: 0 auto; 
         }
 
-        /* Estilo individual de cada card de evento */
+        
         .evento-card {
             display: flex;
             background-color: var(--branco);
@@ -92,7 +92,7 @@
             overflow: hidden;
             box-shadow: var(--sombra-suave);
             transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 5px solid transparent; /* Borda colorida para indicar o dia */
+            border-left: 5px solid transparent; 
         }
 
         .evento-card:hover {
@@ -100,11 +100,11 @@
             box-shadow: 0 12px 30px rgba(2, 15, 31, 0.1);
         }
 
-        /* Cores da borda para cada dia */
+        
         .evento-card[data-dia="28"] { border-color: #3498db; }
         .evento-card[data-dia="29"] { border-color: #e74c3c; }
 
-        /* Bloco de horário à esquerda do card */
+        
         .evento-horario {
             background-color: var(--azul);
             color: var(--branco);
@@ -123,7 +123,7 @@
             display: block;
         }
 
-        /* Bloco de informações à direita do card */
+        
         .evento-info {
             padding: 20px;
             flex-grow: 1;
@@ -136,7 +136,7 @@
             font-weight: 700;
         }
         
-        /* Tag de categoria (Minicurso, Palestra, etc.) */
+        
         .evento-info .evento-categoria {
             display: inline-block;
             background-color: var(--laranja);
@@ -151,7 +151,7 @@
 
         .evento-local, .evento-palestrante {
             display: flex;
-            align-items: flex-start; /* Alinha o ícone com a primeira linha de texto */
+            align-items: flex-start; 
             color: var(--cinza-texto);
             margin-bottom: 8px;
             font-size: 0.95rem;
@@ -162,10 +162,10 @@
             margin-right: 12px;
             width: 16px;
             text-align: center;
-            padding-top: 4px; /* Ajusta a posição vertical do ícone */
+            padding-top: 4px; 
         }
 
-        /* Estilos para o nome e info do palestrante */
+        
         .evento-palestrante div {
             display: flex;
             flex-direction: column;
@@ -175,7 +175,7 @@
             opacity: 0.8;
         }
 
-        /* Ajustes para telas menores (Responsividade) */
+        
         @media (max-width: 768px) {
             .programacao-header h2 {
                 font-size: 2rem;
@@ -183,14 +183,14 @@
             }
 
             .evento-card {
-                flex-direction: column; /* Empilha os blocos de horário e info */
+                flex-direction: column; 
             }
 
             .evento-horario {
                 width: 100%;
                 min-width: 0;
                 padding: 15px;
-                flex-direction: row; /* Horários ficam lado a lado */
+                flex-direction: row; 
                 justify-content: center;
                 gap: 15px;
                 box-sizing: border-box;

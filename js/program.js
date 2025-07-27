@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-            // Array de objetos com todos os eventos, extraídos da sua tabela
+            
             const eventos = [
                 { dia: '28', horario: '10:00 - 12:00', titulo: 'Designing Digital Circuits with Pitanga Student', categoria: 'Short Course', palestrante: 'Alcides Costa', local: 'CCET - LAB C2', infoPalestrante: 'Ph.D. in Computer Science and co-founder of InPlace' },
                 { dia: '28', horario: '13:30 - 13:45', titulo: 'Opening Session', categoria: 'Opening', palestrante: null, local: 'Rectorate Auditorium', infoPalestrante: null },
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const buscaInput = document.getElementById('busca-atividade');
             const filtroBtns = document.querySelectorAll('.filtro-btn');
 
-            // Função que cria e exibe os cards na tela
+            
             function renderizarEventos(eventosParaRenderizar) {
-                eventosGrid.innerHTML = ''; // Limpa a grade antes de adicionar novos cards
+                eventosGrid.innerHTML = ''; 
                 if (eventosParaRenderizar.length === 0) {
                     eventosGrid.innerHTML = '<p style="text-align: center; color: var(--cinza-texto);">Nenhuma atividade encontrada com os filtros selecionados.</p>';
                     return;
@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.className = 'evento-card';
                     card.setAttribute('data-dia', evento.dia);
 
-                    // Cria o HTML para o bloco de horário
+                    
                     const horarioHTML = `
                         <div class="evento-horario">
                             ${evento.horario.split(' - ').map(h => `<span>${h.trim()}</span>`).join('<span>~</span>')}
                         </div>
                     `;
                     
-                    // Cria o HTML para o palestrante (só se houver um)
+                    
                     const palestranteHTML = evento.palestrante ? `
                         <div class="evento-palestrante">
                             <i class="fas fa-user"></i>
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     ` : '';
 
-                    // Cria o HTML para o bloco de informações
+                    
                     const infoHTML = `
                         <div class="evento-info">
                             <span class="evento-categoria">${evento.categoria}</span>
@@ -69,19 +69,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // Função principal que filtra os eventos com base na busca e nos botões de data
+            
             function filtrarEventos() {
                 const termoBusca = buscaInput.value.toLowerCase();
                 const filtroAtivo = document.querySelector('.filtro-btn.active').dataset.filter;
 
                 const eventosFiltrados = eventos.filter(evento => {
-                    // Verifica se o termo de busca corresponde a algum campo do evento
+                    
                     const correspondeBusca = termoBusca === '' ||
                                            evento.titulo.toLowerCase().includes(termoBusca) ||
                                            (evento.palestrante && evento.palestrante.toLowerCase().includes(termoBusca)) ||
                                            evento.categoria.toLowerCase().includes(termoBusca);
 
-                    // Verifica se o evento corresponde ao filtro de data selecionado
+                    
                     const correspondeFiltroData = (filtroAtivo === 'all') || (evento.dia === filtroAtivo);
 
                     return correspondeBusca && correspondeFiltroData;
@@ -90,19 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderizarEventos(eventosFiltrados);
             }
 
-            // Adiciona o evento de clique para cada botão de filtro
+            
             filtroBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove a classe 'active' do botão antigo e adiciona no novo
+                    
                     document.querySelector('.filtro-btn.active').classList.remove('active');
                     btn.classList.add('active');
-                    filtrarEventos(); // Re-renderiza os cards com o novo filtro
+                    filtrarEventos(); 
                 });
             });
 
-            // Adiciona o evento de 'input' para a barra de busca (filtra enquanto digita)
+            
             buscaInput.addEventListener('input', filtrarEventos);
 
-            // Renderização inicial de todos os eventos quando a página carrega
+            
             filtrarEventos();
         });
