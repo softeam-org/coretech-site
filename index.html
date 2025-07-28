@@ -694,17 +694,34 @@
       >
     </footer>
 
-    <div class="alert" id="alert0">
+    <div class="alert alertpos0" id="alert2">
       <div class="alert-content">
         <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
         <span>
-          We're one day away from the event, and spots are running out. Register <a href="#registration"
-          onclick="document.getElementsByClassName('alert')[0].style.display='none'"
+          It's the first day of the event. Don't miss out on registering before it's too late. Register
+          <a href="#registration"
+          onclick="document.getElementById('alert2').style.display='none'"
           >here</a>
         </span>
       </div>
       <button class="close-alert" id="closeAlert0" 
-        onclick="document.getElementsByClassName('alert')[0].style.display='none'">
+        onclick="document.getElementById('alert2').style.display='none'">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+
+    <div class="alert alertpos1" id="alert0">
+      <div class="alert-content">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>
+          
+          The first workshop is at 10 am, see the schedule
+          <a href="#program"
+          onclick="document.getElementById('alert0').style.display='none'"
+          >here</a>
+        </span>
+      </div>
+      <button class="close-alert" id="closeAlert1" 
+        onclick="document.getElementById('alert0').style.display='none'">
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
 
